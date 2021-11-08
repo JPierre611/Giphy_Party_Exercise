@@ -1,9 +1,11 @@
 console.log("Let's get this party started!");
 
-const submit = document.querySelector('#submit');
+const submitBtn = document.querySelector('#submit');
 const term = document.querySelector('#term');
 const imgDiv = document.querySelector('#images');
-submit.addEventListener('click', processSubmit);
+const removeBtn = document.querySelector('#remove');
+submitBtn.addEventListener('click', processSubmit);
+removeBtn.addEventListener('click', processDelete);
 
 async function processSubmit(evt) {
   evt.preventDefault();
@@ -18,6 +20,15 @@ async function processSubmit(evt) {
     alert('Could not find a GIF with your submission! Please try again!');
   }
   term.value ='';
+}
+
+function processDelete(evt) {
+  if (imgDiv.childElementCount) {
+    imgArr = Array.from(imgDiv.children);
+    for (let img of imgArr) {
+      img.remove();
+    }
+  }
 }
 
 
