@@ -1,0 +1,26 @@
+#header {
+  text-align: center;
+}
+
+#search {
+  display: inline;
+}
+
+.container {
+  text-align: center;
+  border-bottom: 1rem;
+}
+
+#remove {
+  color: white;
+  background-color: red;
+}
+
+#submit {
+  color: white;
+  background-color: darkslategray;
+}
+
+#images {
+  border-top: 2rem;
+}
